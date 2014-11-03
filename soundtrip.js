@@ -29,7 +29,7 @@ var SoundTrip = SoundTrip || {};
      * @type object
      */
     SoundTrip.config = {
-        'resourcePath': '/resource/sound/'
+        'resourcePath': '/resource/sound/',
         'ambient': {
             'path': 'ambient/',
             'multiShot': false,
@@ -58,10 +58,10 @@ var SoundTrip = SoundTrip || {};
      */
     SoundQueue.prototype = {
         push: function(soundId) {
-        }
+        },
 
         pause: function(soundId) {
-        }
+        },
 
         clear: function(soundId) {
         }
