@@ -1,0 +1,25 @@
+{
+  "name": "SoundTrip",
+  "version": "0.0.0",
+  "description": "Sound trip.",
+  "main": "soundtrip.js",
+  "keywords": [
+    "soundtrip"
+  ],
+  "authors": [
+    "Paul Swift"
+  ],
+  "license": "Apache 2.0",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.0",
+    "soundmanager": "*"
+  }
+}
