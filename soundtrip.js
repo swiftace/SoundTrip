@@ -15,7 +15,7 @@
  */
 
 // This ensures that the global scope has only one SoundTrip defined, making it act as a singleton.
-var SoundTrip = SoundTrip || {};
+SoundTrip || {};
 
 // Immediately Invoked Function Expression (IIFE) to define and configure the SoundTrip object.
 (function() {
@@ -29,42 +29,41 @@ var SoundTrip = SoundTrip || {};
      * @type object
      */
     SoundTrip.config = {
-        'resourcePath': '/resource/sound/',
-        'ambient': {
-            'path': 'ambient/',
-            'multiShot': false,
-            'loop': true,
-            'queue': false,
-            'crossFade': true
+        resourcePath: '/resource/sound/',
+        ambient: {
+            path: 'ambient/',
+            multiShot: false,
+            loop: true,
+            queue: false,
+            crossFade: true
         },
-        'music': {
-            'path': 'music/',
-            'multiShot': false,
-            'loop': false,
-            'queue': true,
-            'crossFade': false
+        music: {
+            path: 'music/',
+            multiShot: false,
+            loop: false,
+            queue: true,
+            crossFade: false
         },
-        'effect': {
-            'path': 'effect/',
-            'multiShot': true,
-            'loop': false,
-            'queue': true,
-            'crossFade': false
+        effect: {
+            path: 'effect/',
+            multiShot: true,
+            loop: false,
+            queue: true,
+            crossFade: false
         }
     };
 
     /**
-     * 
+     * Sound queue protoype.
      */
-    SoundQueue.prototype = {
-        push: function(soundId) {
-        },
+    var SoundQueue = {};
+    SoundQueue.prototype.push = function(soundId) {
+    };
 
-        pause: function(soundId) {
-        },
+    SoundQueue.prototype.pause = function(soundId) {
+    };
 
-        clear: function(soundId) {
-        }
+    SoundQueue.prototype.clear = function(soundId) {
     };
 
     /**
