@@ -83,6 +83,64 @@
         -->
         <script>(function ($) { if (!$('html.lt-ie9')[0]) { document.addEventListener('touchstart', function() {}, false); } })(jQuery);</script>
 
+        <!-- Additional JavaScript [typically] goes here. -->
+        <script src="vendor/soundmanager/script/soundmanager2-jsmin.js"></script>
+        <script src="res/js/soundtrip.js"></script>
+        <script>
+var soundData = {
+    "ambient": [
+        {
+            "subCategory": "",
+            "artist": "Gaia",
+            "track": "Small Rapid",
+            "filePath": "17_Small_Rapid.mp3"
+        },
+        {
+            "subCategory": "",
+            "artist": "Gaia",
+            "track": "Severe Thunderstorm",
+            "filePath": "58_Severe_Thunderstorm_With_Light_Rain.mp3"
+        }
+    ],
+    "music": [
+        {
+            "subCategory": "",
+            "artist": "thejamlondon",
+            "track": "London Girl",
+            "filePath": "06-LondonGirl.ogg"
+        },
+        {
+            "subCategory": "",
+            "artist": "proclus",
+            "track": "thunder by the love brothers",
+            "filePath": "04.au.mp3"
+        },
+    ],
+    "effect": [
+        {
+            "subCategory": "cartoon",
+            "artist": "unknown",
+            "track": "chomp",
+            "filePath": "cartoon\/chomp.mp3"
+        },
+        {
+            "subCategory": "cartoon",
+            "artist": "unknown",
+            "track": "evil laugh",
+            "filePath": "cartoon\/evil_laugh.mp3"
+        },
+        {
+            "subCategory": "cartoon",
+            "artist": "unknown",
+            "track": "splat",
+            "filePath": "cartoon\/splat.mp3"
+        }
+    ]
+};
+
+var soundBoardHtml = SoundTrip.addResources(soundData).renderBoard();
+        </script>
+
         <!-- Google Universal Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
