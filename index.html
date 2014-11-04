@@ -63,6 +63,7 @@
     <body>
 
         <!-- Content goes here. -->
+        <div id="soundboard"></div>
  
         <!--
           Using jQuery from the Google APIs may result in a faster page load for the client
@@ -88,57 +89,68 @@
         <script src="res/js/soundtrip.js"></script>
         <script>
 var soundData = {
-    "ambient": [
+    ambient: [
         {
-            "subCategory": "",
-            "artist": "Gaia",
-            "track": "Small Rapid",
-            "filePath": "17_Small_Rapid.mp3"
+            subCategory: '',
+            artist: 'Gaia',
+            track: 'Small Rapid',
+            filePath: '17_Small_Rapid.mp3'
         },
         {
-            "subCategory": "",
-            "artist": "Gaia",
-            "track": "Severe Thunderstorm",
-            "filePath": "58_Severe_Thunderstorm_With_Light_Rain.mp3"
+            subCategory: '',
+            artist: 'Gaia',
+            track: 'Severe Thunderstorm',
+            filePath: '58_Severe_Thunderstorm_With_Light_Rain.mp3'
         }
     ],
-    "music": [
+    music: [
         {
-            "subCategory": "",
-            "artist": "thejamlondon",
-            "track": "London Girl",
-            "filePath": "06-LondonGirl.ogg"
+            subCategory: '',
+            artist: 'thejamlondon',
+            track: 'London Girl',
+            filePath: '06-LondonGirl.ogg'
         },
         {
-            "subCategory": "",
-            "artist": "proclus",
-            "track": "thunder by the love brothers",
-            "filePath": "04.au.mp3"
+            subCategory: '',
+            artist: 'proclus',
+            track: 'thunder by the love brothers',
+            filePath: '04.au.mp3'
         },
     ],
-    "effect": [
+    effect: [
         {
-            "subCategory": "cartoon",
-            "artist": "unknown",
-            "track": "chomp",
-            "filePath": "cartoon\/chomp.mp3"
+            subCategory: 'cartoon',
+            artist: 'unknown',
+            track: 'chomp',
+            filePath: 'cartoon\/chomp.mp3'
         },
         {
-            "subCategory": "cartoon",
-            "artist": "unknown",
-            "track": "evil laugh",
-            "filePath": "cartoon\/evil_laugh.mp3"
+            subCategory: 'cartoon',
+            artist: 'unknown',
+            track: 'evil laugh',
+            filePath: 'cartoon\/evil_laugh.mp3'
         },
         {
-            "subCategory": "cartoon",
-            "artist": "unknown",
-            "track": "splat",
-            "filePath": "cartoon\/splat.mp3"
+            subCategory: 'cartoon',
+            artist: 'unknown',
+            track: 'splat',
+            filePath: 'cartoon\/splat.mp3'
         }
     ]
 };
 
-var soundBoardHtml = SoundTrip.addResources(soundData).renderBoard();
+$(function () {
+
+    var ST = SoundTrip.getInstance();
+
+    var soundboardHtml = ST
+        .setResources(soundData)
+        .createBoard();
+
+    $('#soundboard').append(soundboardHtml);
+
+});
+
         </script>
 
         <!-- Google Universal Analytics: change UA-XXXXX-X to be your site's ID. -->
