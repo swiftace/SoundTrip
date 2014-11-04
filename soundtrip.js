@@ -15,7 +15,7 @@
  */
 
 // This ensures that the global scope has only one SoundTrip defined, making it act as a singleton.
-SoundTrip || {};
+var SoundTrip = SoundTrip || {};
 
 // Immediately Invoked Function Expression (IIFE) to define and configure the SoundTrip object.
 (function() {
