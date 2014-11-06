@@ -154,13 +154,13 @@ var SoundTrip = (function () {
             /**
              * Pause a sound.
              */
-            soundPauseOn: function (soundId) {
+            soundPause: function (soundId) {
             },
 
             /**
-             * Un-pause a paused sound.
+             * Resume a paused sound.
              */
-            soundPauseOff: function (soundId) {
+            soundResume: function (soundId) {
             },
 
             /**
@@ -178,13 +178,13 @@ var SoundTrip = (function () {
             /**
              * Pause all sounds.
              */
-            allPauseOn: function () {
+            allPause: function () {
             },
 
             /**
-             * Un-pause all paused sounds.
+             * Resume all paused sounds.
              */
-            allPauseOff: function () {
+            allResume: function () {
             },
 
             /**
